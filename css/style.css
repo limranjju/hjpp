@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+@font-face {
+    font-family: 'chabb';
+    src: url('../font/chab.otf');
+}
+@font-face {
+    font-family: 'ddag';
+    src: url('../font/ddag.otf');
+}
+
+body {
+    cursor: url('../images/mouse1.png'), auto;
+    background-color: #111;
+}
+header {
+    /* overflow-x: hidden; */
+}
+.inner {
+    width: 100%;
+    height: 955px;
+    background-color: #2d2929;
+    font-family: 'chabb';
+    position: relative;
+    /* overflow: hidden; */
+}
+.inner h1 {
+    position: relative;
+    text-align: center;
+    font-size: 8rem;
+    color: #fff;
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke: 2px #2d2929;
+    z-index: 99;
+}
+.inner p {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url("../images/sone1.png")no-repeat center/contain;
+    z-index: 99;
+    
+}
+.note-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 555px;
+    overflow: hidden;   
+    z-index: 9;
+}
+
+.note-icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: fall 5s linear infinite;
+}
+
+.note-icon1 {
+    background-image: url('../images/musical-note1.png');
+}
+
+.note-icon2 {
+    background-image: url('../images/musical-note2.png');
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+.about {
+    width: 100%;
+    background-color: #f9d0ff;
+}
+.about h2 {
+    text-align: center;
+    font-family: 'chabb';
+    width: 100%;
+    background-color: #2d2929;
+    color: #fff;
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke: 2px #2d2929;
+    font-size: 6rem;
+    margin: 0 auto;
+}
+.about h2 b {
+    color: #f9d0ff;
+    text-shadow: 4px 4px 0px rgb(105, 54, 71);
+}
+.about h2:nth-child(1) {
+    padding-top: 100px;
+}
+.about h2:nth-child(3) {
+    padding-bottom: 220px;
+}
+
+.playlist {
+    background-color: #111;
+}
+.playlist .fixlist {
+    position: sticky;
+    top: 0;
+    font-family: 'ddag';
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 2.5rem;
+    background-color: #111;
+    color: #fff;
+    line-height: 80px;
+    border-bottom: 3px solid #848484;
+    z-index: 999;
+}
+.playlist .fixlist img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    position: relative;
+    top: 12px;
+    left: 10px;
+}
+.cd {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background-color: #111;
+    cursor: url('../images/mouse2.png'), auto;
+}
+.playitem1 .cd {
+    position: relative;
+}
+.playitem1 .cd:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/exex.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all 3s ease;
+    border-radius: 50%;
+}
+.playitem1 .cd:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/exexex.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all 3s ease;
+    border-radius: 50%;
+}
+.playitem1 .cd:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/exexexex.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all 3s ease;
+    border-radius: 50%;
+}
+.playitem1 .cd:hover::after {
+    transform: rotate(4000deg);
+}
+
+
+.playitem1, .playitem2, .playitem3 {
+    margin: 170px 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'ddag';
+    
+}
+.playlist b {
+    color: #f9d0ff;
+}
+.playlist p {
+    font-size: 0.7rem;
+    margin-top: 185px;
+}
+.playlist p > b {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.tr {
+    position: relative;
+    top: -50px;
+}
+.cdone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #111;
+    border: 1.5px solid #fff;
+    z-index: 99;
+    margin: 0 auto;
+    position: relative;
+    top: -83%;
+}
+
+.contact {
+    margin-top: 200px;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(#111,#fff );
+    overflow: hidden;
+}
+.thank {
+    font-family: 'chabb';
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: 2px 2px 0px #000;
+    -webkit-text-stroke: 2px #2d2929;
+    margin-left: 50px;
+    position: relative;
+}
+.thank h2:nth-child(1) {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    z-index: 9;
+}
+.thank h2:nth-child(2) {
+    position: relative;
+    z-index: 9;
+}
+.thank h3 {
+    font-size: 2.3rem;
+    line-height: 20px;
+    font-weight: bold;
+    color: #f9d0ff;
+    text-shadow: 2px 2px 0px rgb(105, 54, 71);
+    -webkit-text-stroke: 2px #2d2929;
+    z-index: 9;
+}
+footer p {
+    background-color: #fff;
+    color: #111;
+    font-family: 'ddag';
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.music-note-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.music-note1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/music1.png');
+    background-size: cover;
+    animation: mN 2s infinite ease-in-out;
+    left: 400px;
+    top: -20px;
+    z-index: 0;
+}
+.music-note2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/music2.png');
+    background-size: cover;
+    animation: mN1 2s infinite ease-in-out;
+    left: 550px;
+    top: 50px;
+}
+@keyframes mN {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes mN1 {
+    0% {
+        transform: translateY(0)rotate(15deg);
+    }
+    50% {
+        transform: translateY(20px)rotate(0deg);
+    }
+    100% {
+        transform: translateY(0)rotate(15deg);
+    }
+}
+
+.sns li img {
+    width: 80px;
+    color: #000;
+    margin-top: 100px;
+}
+.sns {
+    display: flex;
+    justify-content: space-around;
+}
